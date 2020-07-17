@@ -1,10 +1,10 @@
 //Core
 import React, { Component } from 'react';
 //Components
+import Loader from '../Loader/Loader';
+import Button from '../Button/Button';
 import Searchbar from '../Searchbar/Searchbar';
 import ImageGallery from '../ImageGallery/ImageGallery';
-import Button from '../Button/Button';
-import Loader from 'react-loader-spinner';
 import Notification from '../Notification/Notification';
 //Services
 import imagesApi from '../../services/imagesApi';
@@ -67,15 +67,7 @@ export default class App extends Component {
 
 				{images.length > 0 && <ImageGallery images={images} />}
 
-				{loading && (
-					<Loader
-						type="ThreeDots"
-						color="#00BFFF"
-						height={80}
-						width={80}
-						style={{ margin: '0 47%' }}
-					/>
-				)}
+				{loading && <Loader />}
 
 				{images.length > 0 && !loading && <Button label="Load more" onLoad={this.fetchImages} />}
 			</>

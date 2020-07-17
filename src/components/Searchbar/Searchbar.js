@@ -20,11 +20,14 @@ export default class Searchbar extends Component {
 
 	handleSubmit = e => {
 		e.preventDefault();
+
 		this.props.onSubmit(this.state.inputValue);
 		this.setState({ inputValue: '' });
 	};
 
 	render() {
+		const { inputValue } = this.state;
+
 		return (
 			<header className={styles.searchbar}>
 				<form className={styles.searchForm} onSubmit={this.handleSubmit}>
@@ -35,10 +38,10 @@ export default class Searchbar extends Component {
 					<input
 						className={styles.searchFormInput}
 						type="text"
-						// autocomplete="off"
-						// autofocus
+						autoComplete="off"
+						autoFocus
 						placeholder="Search images and photos"
-						value={this.state.inputValue}
+						value={inputValue}
 						onChange={this.handleChange}
 					/>
 				</form>
