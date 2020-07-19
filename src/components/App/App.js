@@ -9,7 +9,6 @@ import Notification from '../Notification/Notification';
 //Services
 import imagesApi from '../../services/imagesApi';
 //Styles
-import './App.css';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 export default class App extends Component {
