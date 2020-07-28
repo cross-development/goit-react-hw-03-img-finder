@@ -6,23 +6,16 @@ import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 //Style
 import styles from './ImageGallery.module.css';
 
-const ImageGallery = ({ images }) => {
-	return (
-		<ul className={styles.imageGallery}>
-			{images.map(({ id, webformatURL, largeImageURL, tags }) => (
-				<ImageGalleryItem
-					key={id}
-					webFormat={webformatURL}
-					largeImage={largeImageURL}
-					tags={tags}
-				/>
-			))}
-		</ul>
-	);
-};
+const ImageGallery = ({ images }) => (
+	<ul className={styles.list}>
+		{images.map(({ id, webformatURL, largeImageURL, tags }) => (
+			<ImageGalleryItem key={id} webFormat={webformatURL} largeImage={largeImageURL} tags={tags} />
+		))}
+	</ul>
+);
 
 ImageGallery.propTypes = {
-	images: PropTypes.array.isRequired,
+	images: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default ImageGallery;

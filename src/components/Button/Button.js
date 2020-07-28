@@ -4,13 +4,11 @@ import PropTypes from 'prop-types';
 //Styles
 import styles from './Button.module.css';
 
-const Button = ({ label, onLoad }) => {
-	return (
-		<button type="submit" className={styles.button} onClick={onLoad}>
-			{label}
-		</button>
-	);
-};
+const Button = ({ label, onLoad }) => (
+	<button type="submit" className={styles.button} onClick={onLoad}>
+		{label}
+	</button>
+);
 
 Button.defaultProps = {
 	label: 'Search',

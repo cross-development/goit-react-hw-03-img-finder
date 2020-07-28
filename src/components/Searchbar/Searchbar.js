@@ -15,6 +15,7 @@ export default class Searchbar extends Component {
 
 	handleChange = e => {
 		const { value } = e.target;
+
 		this.setState({ inputValue: value });
 	};
 
@@ -31,12 +32,12 @@ export default class Searchbar extends Component {
 		return (
 			<header className={styles.searchbar}>
 				<form className={styles.searchForm} onSubmit={this.handleSubmit}>
-					<button type="submit" className={styles.searchFormButton}>
-						<span className={styles.searchFormButtonLabel}>Search</span>
+					<button type="submit" className={styles.button}>
+						<span className={styles.buttonLabel}>Search</span>
 					</button>
 
 					<input
-						className={styles.searchFormInput}
+						className={styles.input}
 						type="text"
 						autoComplete="off"
 						autoFocus

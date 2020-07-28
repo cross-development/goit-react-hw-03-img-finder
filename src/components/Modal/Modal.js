@@ -6,8 +6,8 @@ import styles from './Modal.module.css';
 
 export default class Modal extends Component {
 	static propTypes = {
-		image: PropTypes.string.isRequired,
 		alt: PropTypes.string,
+		image: PropTypes.string.isRequired,
 	};
 
 	static defaultProps = {
