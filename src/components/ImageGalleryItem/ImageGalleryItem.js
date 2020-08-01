@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 //Components
-import Modal from '../Modal/Modal';
+import Modal from '../Modal';
 //Styles
 import styles from './ImageGalleryItem.module.css';
 

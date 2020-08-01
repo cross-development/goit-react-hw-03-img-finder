@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 //Components
-import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
+import ImageGalleryItem from '../ImageGalleryItem';
 //Style
 import styles from './ImageGallery.module.css';
 

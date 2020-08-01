@@ -1,11 +1,11 @@
 //Core
 import React, { Component } from 'react';
 //Components
-import Loader from '../Loader/Loader';
-import Button from '../Button/Button';
-import Searchbar from '../Searchbar/Searchbar';
-import ImageGallery from '../ImageGallery/ImageGallery';
-import Notification from '../Notification/Notification';
+import Loader from '../Loader';
+import Button from '../Button';
+import Searchbar from '../Searchbar';
+import ImageGallery from '../ImageGallery';
+import Notification from '../Notification';
 //Services
 import imagesApi from '../../services/imagesApi';
 //Styles
