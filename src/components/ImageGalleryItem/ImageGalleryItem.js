@@ -30,6 +30,7 @@ export default class ImageGalleryItem extends Component {
 		return (
 			<li className={styles.item}>
 				<img src={webFormat} alt={tags} className={styles.itemImage} onClick={this.toggleModal} />
+
 				{showModal && <Modal image={largeImage} alt={tags} onClose={this.toggleModal} />}
 			</li>
 		);
