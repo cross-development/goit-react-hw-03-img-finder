@@ -13,18 +13,12 @@ export default class Searchbar extends Component {
 		inputValue: '',
 	};
 
-	handleChange = e => {
-		const { value } = e.target;
-
-		this.setState({ inputValue: value });
-	};
+	handleChange = e => this.setState({ inputValue: e.target.value });
 
 	handleSubmit = e => {
 		e.preventDefault();
 
-		const { inputValue } = this.state;
-
-		this.props.onSubmit(inputValue);
+		this.props.onSubmit(this.state.inputValue);
 		this.setState({ inputValue: '' });
 	};
 
