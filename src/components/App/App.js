@@ -7,17 +7,17 @@ import Searchbar from '../Searchbar';
 import ImageGallery from '../ImageGallery';
 import Notification from '../Notification';
 //Services
-import imagesApi from '../../services/imagesApi';
+import imagesApi from 'services/imagesApi';
 //Styles
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 export default class App extends Component {
 	state = {
-		images: [],
-		loading: false,
-		error: null,
-		searchQuery: '',
 		page: 1,
+		images: [],
+		error: null,
+		loading: false,
+		searchQuery: '',
 	};
 
 	componentDidUpdate(prevProps, prevState) {
@@ -51,9 +51,7 @@ export default class App extends Component {
 			.finally(() => this.setState({ loading: false }));
 	};
 
-	handleFormSubmit = query => {
-		this.setState({ searchQuery: query, page: 1, images: [] });
-	};
+	handleFormSubmit = query => this.setState({ searchQuery: query, page: 1, images: [] });
 
 	render() {
 		const { loading, error, images } = this.state;

@@ -15,6 +15,4 @@ const fetchImagesByQuery = async (searchQuery, page = 1) => {
 	}
 };
 
-export default {
-	fetchImagesByQuery,
-};
+export default { fetchImagesByQuery };

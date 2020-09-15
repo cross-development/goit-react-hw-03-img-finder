@@ -24,8 +24,8 @@ export default class Modal extends Component {
 		window.removeEventListener('click', this.handleCloseModal);
 	}
 
-	handleCloseModal = e => {
-		if (e.code === 'Escape' || e.target.nodeName === 'DIV') {
+	handleCloseModal = ({ code, target }) => {
+		if (code === 'Escape' || target.nodeName === 'DIV') {
 			this.props.onClose();
 		}
 	};
