@@ -24,8 +24,10 @@ export default class ImageGalleryItem extends Component {
 	toggleModal = () => this.setState(prevState => ({ showModal: !prevState.showModal }));
 
 	render() {
-		const { webFormat, tags, largeImage } = this.props;
-		const { showModal } = this.state;
+		const {
+			props: { webFormat, tags, largeImage },
+			state: { showModal },
+		} = this;
 
 		return (
 			<li className={styles.item}>
